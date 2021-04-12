@@ -28,7 +28,6 @@ public class VerifyKeyValuesTest {
       IllegalAccessException, InstantiationException {
     Class scriptClass = new GroovyClassLoader().parseClass(new File(FILE_NAME));
     GroovyObject scriptInstance = (GroovyObject) scriptClass.newInstance();
-    scriptInstance.invokeMethod("getValuesByKey", "FirstName");
     List<String> values = (List<String>) scriptInstance.invokeMethod("getValuesByKey", key);
     Assert.assertEquals(values.toString(), expectedKeyValues.toString(),
         "Key values differ from expected values!");
