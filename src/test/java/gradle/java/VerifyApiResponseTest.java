@@ -20,7 +20,7 @@ public class VerifyApiResponseTest {
   }
 
   @Test(dataProvider = "Provider of test data for verifying api response")
-  public void verifyKeyValues(int number) throws IOException, IllegalAccessException,
+  public void verifyApiResponseFromGroovy(int number) throws IOException, IllegalAccessException,
       InstantiationException {
     if (number < 1 || number > 100) {
       Assert.fail("Wrong test data: number must be between 1 and 100!");
